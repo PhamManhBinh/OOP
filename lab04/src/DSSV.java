@@ -66,7 +66,7 @@ class DSSV {
     public void lietKeXepLoai(String st){
         System.out.println("Danh sách các sinh viên "+st+":");
         for(int i=0;i<soSV;i++)
-            if(SV[i].layXepLoai().compareTo(st)==0){
+            if(SV[i].layXepLoai().equals(st)){
                 SV[i].hienThi();
             }
     }
