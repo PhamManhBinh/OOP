@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class PTB2 implements ActionListener{
+public class PTB2 implements ActionListener,WindowListener{
         Frame f=new Frame();
         Label l=new Label("Chương trình giải PT bậc 2");
         Label l1=new Label("x^2+");
@@ -17,6 +17,7 @@ public class PTB2 implements ActionListener{
         Button thoat=new Button("Thoát");
        
     public PTB2(){
+        f.addWindowListener(this);
         f.setSize(300, 250);
         f.setLayout(new FlowLayout());
         l.setBackground(Color.GREEN);
@@ -61,9 +62,20 @@ public class PTB2 implements ActionListener{
         }
         
     }
+    public void windowClosing(WindowEvent e){
+        System.exit(0);
+    }
+    public void windowOpened(WindowEvent e) {}
+    public void windowClosed(WindowEvent e) {}
+    public void windowIconified(WindowEvent e) {}
+    public void windowDeiconified(WindowEvent e) {}
+    public void windowActivated(WindowEvent e) {}
+    public void windowDeactivated(WindowEvent e) {}
+    
     public static void main(String args[]){
         new PTB2();
     }
+
     
 }
 
