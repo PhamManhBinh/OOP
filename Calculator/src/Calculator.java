@@ -21,6 +21,7 @@ public class Calculator extends Frame implements ActionListener,WindowListener{
       this.setSize(250, 400);
       this.setLayout(null);
       this.setBackground( new Color(171, 207, 255) );
+      this.setLocationByPlatform(true);
       kq.setBackground(Color.white);
       kq.setFont(new Font("Times New Roman",Font.BOLD,25));
       kq.setAlignment(2);
@@ -129,8 +130,12 @@ public class Calculator extends Frame implements ActionListener,WindowListener{
       this.setVisible(true);
     }
     public void actionPerformed(ActionEvent e){
-      if(e.getSource()==clear)
+      if(e.getSource()==clear){
+          so1=0;
+          so2=0;
+          dau="";
           kq.setText("");
+      }
       if(e.getSource()==cong){
           so1=Float.parseFloat(kq.getText());
           kq.setText("");
